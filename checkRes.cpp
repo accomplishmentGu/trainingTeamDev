@@ -7,7 +7,7 @@ using namespace std;
 int main () {
     
 	int T = 0; //对拍 T 组，可以调。
-    cin >> T;
+	cin >> T;
     
 	for (int test = 1; test <= T; test++) {
 		//下面所有的文件名都可以换成自己的
