@@ -1,4 +1,4 @@
 # trainingTeamDev
-GuZheran's code of XiaoTuLing training team. 
+GuZheran's code repositories about XiaoTuLing training team's problems. 
 
-GuZheran的小图灵集训队代码。
+GuZheran关于小图灵集训队题目的代码仓库。
