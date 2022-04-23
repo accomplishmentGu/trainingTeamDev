@@ -2,11 +2,7 @@
  * Author: guzheran @YYXX
  */
  
-#include <iostream>
-#include <vector>
-#include <iomanip>
-#include <random>
-#include <chrono>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -299,7 +295,7 @@ string tobinary (ll S, int len) {
 	
 }
 
-mt19937 mtrnd(std::chrono::system_clock::now().time_since_epoch().count());
+mt19937_64 mtrnd(std::chrono::system_clock::now().time_since_epoch().count());
 
 /* template ends here */
 
