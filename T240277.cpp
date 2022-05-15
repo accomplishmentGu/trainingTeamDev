@@ -28,9 +28,9 @@ void Core () {
 			}
 			
 			for (int m = i; m < 10001; m++) {
-	    		_dpArray[m] = (_dpArray[m] + _dpArray[m - i]) % mod;
-	    	}
-    	}
+				_dpArray[m] = (_dpArray[m] + _dpArray[m - i]) % mod;
+			}
+		}
 	}
 	
 }
