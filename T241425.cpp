@@ -13,6 +13,7 @@ int _energy[509];
 int _line = 0;
 int _cell = 0;
 int _num = 0;
+int _res = 0; 
 
 void CparseIn () {
 	
@@ -61,11 +62,15 @@ void CparseIn () {
 
 void Core () {
 	
+	_res = _dpArray[0];
+	
 	for (int i = 1; i < _line + 1; i++) {
 		for (int m = _num; m > -1; m--) {
 			for (int k = 1; k < min(_cell, m) + 1; k++) {
 				_dpArray[m] = min(_dpArray[m], _dpArray[m - k] - (_energy[i] - _myMap[i][k]));
 			}
+			
+			_res = min(_res, _dpArray[m]);
 		}
 	}
 	
@@ -73,7 +78,7 @@ void Core () {
 
 void CwriteOut ()  {
 	
-	cout << _dpArray[_num] << '\n';
+	cout << _res << '\n';
 	
 } 
 
