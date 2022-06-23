@@ -15,7 +15,7 @@ typedef pair<int, int> pii;
 
 #define fi first
 #define se second
-#define register rg
+#define rg register 
 #define mp make_pair
 #define pb push_back
 #define pf push_front
@@ -201,13 +201,20 @@ ll QuickPow (ll x, ll p) {
 	
 }
 
-string tobinary (ll S, int len) {
+string Change (ll S, int k) {
 	
-	string res;
+	string res = "";
 	
-	for (int i = 0; i < len; i++) {
-		res = char((S & 1) + '0') + res;
-		S >>= 1;
+	while (S) {
+		if ((S % k) > 9) {
+			res = char((S % k - 10) + 'A') + res;
+		}
+		
+		else {
+			res = char((S % k) + '0') + res;
+		}
+		
+		S /= k;
 	}
 	
 	return res;
