@@ -201,7 +201,7 @@ ll QuickPow (ll x, ll p) {
 	
 }
 
-string Change (ll S, int k) {
+string ChangeTo (ll S, int k) {
 	
 	string res = "";
 	
@@ -215,6 +215,24 @@ string Change (ll S, int k) {
 		}
 		
 		S /= k;
+	}
+	
+	return res;
+	
+}
+
+ll GetFrom (string S, int k) {
+	
+	ll res = 0;
+	
+	rep (i, 0, S.length() - 1) {
+		if (S[i] >= 'A' && S[i] <= 'Z') {
+			res = res + (S[i] - 'A' + 10) * pow(k, S.length() - i - 1);
+		}
+		
+		else {
+			res = res + (S[i] - '0') * pow(k, S.length() - i - 1);
+		}
 	}
 	
 	return res;
