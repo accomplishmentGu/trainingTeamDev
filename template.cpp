@@ -205,6 +205,10 @@ string ChangeTo (ll S, int k) {
 	
 	string res = "";
 	
+	if (S == 0) {
+		return "0";
+	}
+	
 	while (S) {
 		if ((S % k) > 9) {
 			res = char((S % k - 10) + 'A') + res;
