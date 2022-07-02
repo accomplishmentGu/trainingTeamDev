@@ -54,6 +54,9 @@ void CwriteOut () {
 
 int main () {
 	
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr), cout.tie(nullptr);
+	 
 	CparseIn();
 	Core();
 	CwriteOut();
